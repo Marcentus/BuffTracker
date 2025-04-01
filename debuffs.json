@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Uppercut",
+    "detect_image": "uppercut.png",
+    "icon_image": "uppercut_icon.png",
+    "priority": 5,
+    "category": "medium",
+    "enabled": false
+  },
+  {
+    "name": "Smokescreen",
+    "detect_image": "smokescreen.png",
+    "icon_image": "smokescreen_icon.png",
+    "priority": 7,
+    "category": "medium",
+    "enabled": false
+  },
+  {
+    "name": "Mir",
+    "detect_image": "mir.png",
+    "icon_image": "mir_icon.png",
+    "priority": 2,
+    "category": "long",
+    "enabled": false
+  },
+  {
+    "name": "Purrling",
+    "detect_image": "purrling.png",
+    "icon_image": "purrling_icon.png",
+    "priority": 1,
+    "category": "long",
+    "enabled": false
+  },
+  {
+    "name": "DanceOfDeath",
+    "detect_image": "danceofdeath.png",
+    "icon_image": "danceofdeath_icon.png",
+    "priority": 5,
+    "category": "short",
+    "enabled": false
+  },
+  {
+    "name": "DeathMark",
+    "detect_image": "deathmark.png",
+    "icon_image": "deathmark_icon.png",
+    "priority": 4,
+    "category": "medium",
+    "enabled": false
+  },
+  {
+    "name": "SupportShot",
+    "detect_image": "supportshot.png",
+    "icon_image": "supportshot_icon.png",
+    "priority": 0,
+    "category": "short",
+    "enabled": false
+  },
+  {
+    "name": "Fateweaver",
+    "detect_image": "fateweaver.png",
+    "icon_image": "fateweaver_icon.png",
+    "priority": 3,
+    "category": "medium",
+    "enabled": false
+  },
+  {
+    "name": "Whale",
+    "detect_image": "whale.png",
+    "icon_image": "whale_icon.png",
+    "priority": 11,
+    "category": "short",
+    "enabled": false
+  },
+  {
+    "name": "foxy",
+    "detect_image": "foxy.png",
+    "icon_image": "foxy_icon.png",
+    "priority": 12,
+    "category": "short",
+    "enabled": false
+  },
+  {
+    "name": "Pall",
+    "detect_image": "pall.png",
+    "icon_image": "pall_icon.png",
+    "priority": 1,
+    "category": "short",
+    "enabled": false
+  },
+  {
+    "name": "Astrology",
+    "detect_image": "astrology.png",
+    "icon_image": "astrology_icon.png",
+    "priority": 6,
+    "category": "medium",
+    "enabled": false
+  },
+  {
+    "name": "BFO",
+    "detect_image": "bfo.png",
+    "icon_image": "bfo_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "FlameInstill",
+    "detect_image": "flameinstill.png",
+    "icon_image": "flameinstill_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "FrostInstill",
+    "detect_image": "frostinstill.png",
+    "icon_image": "frostinstill_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "ThunderInstill",
+    "detect_image": "thunderinstill.png",
+    "icon_image": "thunderinstill_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "Ladeca",
+    "detect_image": "ladeca.png",
+    "icon_image": "ladeca_icon.png",
+    "priority": 15,
+    "category": "damagebuffs",
+    "enabled": false
+  },
+  {
+    "name": "ManaShield",
+    "detect_image": "manashield.png",
+    "icon_image": "manashield_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "PowerPot",
+    "detect_image": "powerpot.png",
+    "icon_image": "powerpot_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "WhaleBuff",
+    "detect_image": "whalebuff.png",
+    "icon_image": "whalebuff_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "SpiritAwakening",
+    "detect_image": "spiritawakening.png",
+    "icon_image": "spiritawakening_icon.png",
+    "priority": 15,
+    "category": "damagebuffs",
+    "enabled": false
+  },
+  {
+    "name": "MarchSong",
+    "detect_image": "marchsong.png",
+    "icon_image": "marchsong_icon.png",
+    "priority": 15,
+    "category": "supportbuffs",
+    "enabled": false
+  },
+  {
+    "name": "SelfFateWeaver",
+    "detect_image": "selffateweaver.png",
+    "icon_image": "selffateweaver_icon.png",
+    "priority": 15,
+    "category": "damagebuffs",
+    "enabled": false
+  },
+  {
+    "name": "TheStar",
+    "detect_image": "thestar.png",
+    "icon_image": "thestar_icon.png",
+    "priority": 15,
+    "category": "shouldalwaysbeactive",
+    "enabled": true
+  },
+  {
+    "name": "ExploitWeakness",
+    "detect_image": "exploitweakness.png",
+    "icon_image": "exploitweakness_icon.png",
+    "priority": 15,
+    "category": "damagebuffs",
+    "enabled": false
+  }
+]

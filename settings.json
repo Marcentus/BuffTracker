@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "name": "shouldalwaysbeactive",
+      "x": 2181,
+      "y": 511,
+      "width": 59,
+      "height": 761,
+      "window_x": 2131,
+      "window_y": 523,
+      "layout": "vertical",
+      "window_height": 68,
+      "anchor_detection_enabled": true,
+      "anchor_image": "buff_anchor.png",
+      "anchor_x": 2178,
+      "anchor_y": 511,
+      "anchor_width": 61,
+      "anchor_height": 717,
+      "icon_size": 38,
+      "selected_debuffs": []
+    }
+  ]
+}
