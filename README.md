@@ -23,6 +23,7 @@ Invert: Show icons when debuff DETECTED
 
 Opacity: Always show with opacity changes
 
+
 Icon Size: Adjust with slider in title bar
 
 Layout: Toggle vertical/horizontal with ↔/↕ button
