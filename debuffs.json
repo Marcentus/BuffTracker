@@ -15,29 +15,39 @@
     "icon_image": "mir_icon.png"
   },
   {
-    "name": "Purrling",
-    "detect_image": "purrling.png",
-    "icon_image": "purrling_icon.png"
-  },
-  {
-    "name": "DanceOfDeath",
-    "detect_image": "danceofdeath.png",
-    "icon_image": "danceofdeath_icon.png"
-  },
-  {
     "name": "DeathMark",
     "detect_image": "deathmark.png",
     "icon_image": "deathmark_icon.png"
   },
   {
-    "name": "SupportShot",
-    "detect_image": "supportshot.png",
-    "icon_image": "supportshot_icon.png"
-  },
-  {
     "name": "Fateweaver",
     "detect_image": "fateweaver.png",
     "icon_image": "fateweaver_icon.png"
+  },
+  {
+    "name": "Water Balloon",
+    "detect_image": "waterballoon.png",
+    "icon_image": "waterballoon_icon.png"
+  },
+  {
+    "name": "Purrling",
+    "detect_image": "purrling.png",
+    "icon_image": "purrling_icon.png"
+  },
+  {
+    "name": "Astrology",
+    "detect_image": "astrology.png",
+    "icon_image": "astrology_icon.png"
+  },
+  {
+    "name": "Pragarah",
+    "detect_image": "prag.png",
+    "icon_image": "prag_icon.png"
+  },
+  {
+    "name": "SupportShot",
+    "detect_image": "supportShot.png",
+    "icon_image": "supportshot_icon.png"
   },
   {
     "name": "Whale",
@@ -50,14 +60,14 @@
     "icon_image": "foxy_icon.png"
   },
   {
+    "name": "DanceOfDeath",
+    "detect_image": "danceofdeath.png",
+    "icon_image": "danceofdeath_icon.png"
+  },
+  {
     "name": "Pall",
     "detect_image": "pall.png",
     "icon_image": "pall_icon.png"
-  },
-  {
-    "name": "Astrology",
-    "detect_image": "astrology.png",
-    "icon_image": "astrology_icon.png"
   },
   {
     "name": "BFO",
