@@ -703,7 +703,7 @@ class CategoryWindow(QWidget):
     def detection_loop(self):
         """The main loop for detecting debuffs on screen."""
         last_detection_state = {} # Track last known state to only emit changes
-        sct = mss.mss()
+        sct = mss.MSS()
 
         while self.detection_running:
             anchor_check_passed = False # Assume fail initially
