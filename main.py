@@ -3,7 +3,7 @@ import json
 import time
 import threading
 import numpy as np
-from PIL import ImageGrab
+import mss
 import cv2
 from PyQt5.QtCore import Qt, QPoint, pyqtSignal, QRect, QSettings, QEvent
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QLabel,
@@ -703,6 +703,7 @@ class CategoryWindow(QWidget):
     def detection_loop(self):
         """The main loop for detecting debuffs on screen."""
         last_detection_state = {} # Track last known state to only emit changes
+        sct = mss.mss()
 
         while self.detection_running:
             anchor_check_passed = False # Assume fail initially
@@ -714,19 +715,21 @@ class CategoryWindow(QWidget):
                         anchor_region = QRect(self.anchor_region)
 
                     if not anchor_region.isEmpty():
-                        anchor_bbox = (
-                            anchor_region.x(), anchor_region.y(),
-                            anchor_region.x() + anchor_region.width(), anchor_region.y() + anchor_region.height()
-                        )
-                        # --- Use try-except for ImageGrab ---
+                        anchor_bbox = {
+                            "left": anchor_region.x(), 
+                            "top": anchor_region.y(),
+                            "width": anchor_region.width(), 
+                            "height": anchor_region.height()
+                        }
+                        # --- Use try-except for mss ---
                         try:
-                            anchor_screen = ImageGrab.grab(bbox=anchor_bbox)
+                            anchor_screen = sct.grab(anchor_bbox)
                             anchor_screen_np = np.array(anchor_screen)
                             if anchor_screen_np.size == 0:
-                                print(f"Warning [{self.category_name}]: Anchor ImageGrab failed (empty).")
+                                print(f"Warning [{self.category_name}]: Anchor screen grab failed (empty).")
                                 raise ValueError("Empty anchor screenshot") # Treat as error
 
-                            anchor_gray_screen = cv2.cvtColor(anchor_screen_np, cv2.COLOR_BGR2GRAY)
+                            anchor_gray_screen = cv2.cvtColor(anchor_screen_np, cv2.COLOR_BGRA2GRAY)
                             anchor_template_path = f"images/{self.anchor_image_path}"
                             # --- Cache anchor template? For now, load each time ---
                             anchor_template = cv2.imread(anchor_template_path, 0)
@@ -783,22 +786,24 @@ class CategoryWindow(QWidget):
                         time.sleep(0.5) # Wait if region is not set
                         continue
 
-                    bbox = (
-                        current_region.x(), current_region.y(),
-                        current_region.x() + current_region.width(), current_region.y() + current_region.height()
-                    )
-                    # --- Use try-except for ImageGrab ---
+                    bbox = {
+                        "left": current_region.x(), 
+                        "top": current_region.y(),
+                        "width": current_region.width(), 
+                        "height": current_region.height()
+                    }
+                    # --- Use try-except for mss ---
                     try:
-                        screen = ImageGrab.grab(bbox=bbox)
+                        screen = sct.grab(bbox)
                         screen_np = np.array(screen)
                         if screen_np.size == 0:
-                            print(f"Warning [{self.category_name}]: Debuff ImageGrab failed (empty).")
+                            print(f"Warning [{self.category_name}]: Debuff screen grab failed (empty).")
                             raise ValueError("Empty debuff screenshot") # Treat as error
 
-                        gray_screen = cv2.cvtColor(screen_np, cv2.COLOR_BGR2GRAY)
+                        gray_screen = cv2.cvtColor(screen_np, cv2.COLOR_BGRA2GRAY)
 
                     except Exception as grab_error:
-                         print(f"Debuff ImageGrab Error [{self.category_name}]: {grab_error}")
+                         print(f"Debuff screen grab Error [{self.category_name}]: {grab_error}")
                          # If screen grab fails, assume all debuffs are not detected for this cycle
                          for debuff_name in list(last_detection_state.keys()): # Iterate over keys copy
                              if last_detection_state.get(debuff_name) is True:
