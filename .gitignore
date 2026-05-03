@@ -2,3 +2,6 @@ __pycache__/
 .env
 images/
 venv/
+dist/
+build/
+BuffTracker.spec
